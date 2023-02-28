@@ -23,6 +23,12 @@
         <li class="nav-item">
           <router-link to="/add" class="nav-link">Add</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/shelfs" class="nav-link">Shelfs</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/addShelf" class="nav-link">AddShelfs</router-link>
+        </li>
       </div>
 
       <div v-if="!currentUser" class="navbar-nav ml-auto">

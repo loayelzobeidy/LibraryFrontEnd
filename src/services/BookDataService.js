@@ -1,37 +1,37 @@
 import http from "../http-common";
 
-class TutorialDataService {
+class BookDataService {
   getAll() {
-    var tutorials = http.get("/tutorials");
-    console.log("heree",tutorials)
-    return tutorials;
+    var books = http.get("/books");
+    console.log("heree",books)
+    return books;
   }
 
   get(id) {
-    return http.get(`/tutorials/${id}`);
+    return http.get(`/books/${id}`);
   }
 
   create(data) {
     console.log("create")
-    return http.post("/tutorials", data);
+    return http.post("/books", data);
   }
 
   update(id, data) {
-    return http.put(`/tutorials/${id}`, data);
+    return http.put(`/books/${id}`, data);
   }
 
   delete(id) {
-    return http.delete(`/tutorials/${id}`);
+    return http.delete(`/books/${id}`);
   }
 
   deleteAll() {
-    return http.delete(`/tutorials`);
+    return http.delete(`/books`);
   }
 
   findByTitle(title) {
-    return http.get(`/tutorials?title=${title}`);
+    return http.get(`/books?title=${title}`);
   }
 }
 
-export default new TutorialDataService();
+export default new BookDataService();
   

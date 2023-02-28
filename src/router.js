@@ -29,6 +29,23 @@ const routes =  [
     name: "add",
     component: () => import("./components/AddBook")
   },
+  {
+    
+    path: "/shelfs",
+    alias: "/shelfs",
+    name: "shelfs",
+    component: () => import("./components/ShelfsList")
+  },
+  {
+    path: "/shelfs/:id",
+    name: "shelf-details",
+    component: () => import("./components/Shelf")
+  },
+  {
+    path: "/addShelf",
+    name: "addShelf",
+    component: () => import("./components/AddShelf")
+  },
  
 {
   path: "/home",
