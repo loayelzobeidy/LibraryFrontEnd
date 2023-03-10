@@ -3,15 +3,15 @@
       <h4>Shelf</h4>
       <form>
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title">Location</label>
           <input type="text" class="form-control" id="title"
-            v-model="currentShelf.title"
+            v-model="currentShelf.location"
           />
         </div>
         <div class="form-group">
-          <label for="description">Description</label>
+          <label for="description">Capacity</label>
           <input type="text" class="form-control" id="description"
-            v-model="currentShelf.description"
+            v-model="currentShelf.capacity"
           />
         </div>
   
@@ -79,8 +79,8 @@
       updatePublished(status) {
         var data = {
           id: this.currentShelf.id,
-          title: this.currentShelf.title,
-          description: this.currentShelf.description,
+          title: this.currentShelf.location,
+          description: this.currentShelf.capacity,
           published: status
         };
   
