@@ -2,11 +2,11 @@
     <div class="list row">
       <div class="col-md-8">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search by title"
-            v-model="title"/>
+          <input type="text" class="form-control" placeholder="Search by id"
+            v-model="id"/>
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button"
-              @click="searchTitle"
+            <button class="btn btn-success" type="button"
+              @click="searchId"
             >
               Search
             </button>
@@ -22,7 +22,7 @@
             :key="index"
             @click="setActiveShelf(shelf, index)"
           >
-            {{ shelf.title }}
+            {{ shelf.id }}
           </li>
         </ul>
   
@@ -34,15 +34,12 @@
         <div v-if="currentShelf">
           <h4>Shelf</h4>
           <div>
-            <label><strong>Title:</strong></label> {{ currentShelf.title }}
+            <label><strong>Id:</strong></label> {{ currentShelf.id }}
           </div>
           <div>
-            <label><strong>Description:</strong></label> {{ currentShelf.description }}
+            <label><strong>location:</strong></label> {{ currentShelf.location }}
           </div>
-          <div>
-            <label><strong>Status:</strong></label> {{ currentShelf.published ? "Published" : "Pending" }}
-          </div>
-  
+          
           <router-link :to="'/shelfs/' + currentShelf.id" class="badge badge-warning">Edit</router-link>
         </div>
         <div v-else>
@@ -100,8 +97,8 @@
           });
       },
       
-      searchTitle() {
-        ShelfDataService.findByTitle(this.title)
+      searchId() {
+        ShelfDataService.findById(this.id)
           .then(response => {
             this.shelfs = response.data;
             this.setActiveShelf(null);
@@ -123,6 +120,7 @@
     text-align: left;
     max-width: 750px;
     margin: auto;
+    margin-top: 3%;
   }
   </style>
   

@@ -5,7 +5,7 @@
         <input type="text" class="form-control" placeholder="Search by title"
           v-model="title"/>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button"
+          <button class="btn btn-success" type="button"
             @click="searchTitle"
           >
             Search
@@ -122,6 +122,6 @@ export default {
 .list {
   text-align: left;
   max-width: 750px;
-  margin: auto;
+  margin: 3%;
 }
 </style>

@@ -26,8 +26,8 @@ class ShelfDataService {
     return http.delete(`/shelfs`);
   }
 
-  findByTitle(title) {
-    return http.get(`/shelfs?title=${title}`);
+  findById(id) {
+    return http.get(`/shelfs?title=${id}`);
   }
 }
 
